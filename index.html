@@ -4,134 +4,104 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Looply | 从美国出发，走向全球</title>
-<script>
-  (function () {
-    const PASSWORD = "looply2026";
-    const input = prompt("Enter access code");
 
-    if (!input || input !== PASSWORD) {
-      document.open();
-      document.write(`
-        <h1 style="color:white;text-align:center;margin-top:20%;background:#0b0b0d;height:100vh;">
-          Access Denied
-        </h1>
-      `);
-      document.close();
+  <script>
+    (function () {
+      const PASSWORD = "looply2026";
+      const input = prompt("Enter access code");
 
-      throw new Error("Blocked");
-    }
-  })();
-</script>
-            html, body {
-              margin: 0;
-              height: 100%;
-              background: #0b0b0d;
-              color: #fffaf3;
-              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            }
-            .wrap {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              height: 100vh;
-              text-align: center;
-            }
-            h1 {
-              font-size: 48px;
-              margin-bottom: 12px;
-            }
-            p {
-              opacity: 0.7;
-            }
-          </style>
-        </head>
-        <body>
-          <div class="wrap">
-            <div>
-              <h1>Access Denied</h1>
-              <p>Password required</p>
+      if (!input || input !== PASSWORD) {
+        document.open();
+        document.write(`
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Access Denied</title>
+            <style>
+              html, body {
+                margin: 0;
+                height: 100%;
+                background: #0a0a0c;
+                color: #fffaf3;
+                font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+              }
+              .lock-screen {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 24px;
+                background:
+                  linear-gradient(rgba(6,6,8,0.82), rgba(6,6,8,0.94)),
+                  radial-gradient(circle at center, rgba(214,185,138,0.08), transparent 45%);
+              }
+              .lock-box {
+                max-width: 520px;
+              }
+              .brand {
+                font-size: 18px;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: rgba(245,241,234,0.58);
+                margin-bottom: 18px;
+              }
+              h1 {
+                margin: 0 0 12px;
+                font-size: 52px;
+                line-height: 1.02;
+                letter-spacing: -0.05em;
+              }
+              p {
+                margin: 0;
+                font-size: 18px;
+                line-height: 1.7;
+                color: rgba(245,241,234,0.72);
+              }
+            </style>
+          </head>
+          <body>
+            <div class="lock-screen">
+              <div class="lock-box">
+                <div class="brand">Looply</div>
+                <h1>Access Denied</h1>
+                <p>This page is restricted.</p>
+              </div>
             </div>
-          </div>
-        </body>
-        </html>
-      `);
-      document.close();
+          </body>
+          </html>
+        `);
+        document.close();
+        throw new Error("Blocked");
+      }
+    })();
+  </script>
 
-      // ❗终止后续所有脚本和渲染
-      throw new Error("Blocked");
-    }
-  })();
-</script>
-            html, body {
-              margin: 0;
-              height: 100%;
-              background: #0b0b0d;
-              color: #fffaf3;
-              font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            }
-            .lock-screen {
-              min-height: 100vh;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              text-align: center;
-              padding: 24px;
-              background:
-                linear-gradient(rgba(6,6,8,0.82), rgba(6,6,8,0.92)),
-                radial-gradient(circle at center, rgba(214,185,138,0.08), transparent 45%);
-            }
-            .lock-box {
-              max-width: 520px;
-            }
-            .brand {
-              font-size: 18px;
-              letter-spacing: 0.18em;
-              text-transform: uppercase;
-              color: rgba(245,241,234,0.58);
-              margin-bottom: 18px;
-            }
-            h1 {
-              margin: 0 0 12px;
-              font-size: 52px;
-              line-height: 1.02;
-              letter-spacing: -0.05em;
-            }
-            p {
-              margin: 0;
-              font-size: 18px;
-              line-height: 1.7;
-              color: rgba(245,241,234,0.72);
-            }
-          </style>
-        </head>
-        <body>
-          <div class="lock-screen">
-            <div class="lock-box">
-              <div class="brand">Looply</div>
-              <h1>Access Denied</h1>
-              <p>This page is restricted.</p>
-            </div>
-          </div>
-        </body>
-      </html>
-    `;
-    throw new Error("Access denied");
-  }
-</script>
   <style>
     :root {
-      --bg: #0b0b0d;
-      --bg2: #111214;
-      --surface: rgba(255,255,255,0.08);
-      --surface-strong: rgba(255,255,255,0.12);
-      --line: rgba(255,255,255,0.12);
-      --text: #f5f1ea;
-      --muted: rgba(245,241,234,0.78);
-      --soft: rgba(245,241,234,0.56);
+      --bg: #0a0a0c;
+      --bg2: #121316;
+
+      --surface: rgba(255,255,255,0.06);
+      --surface-strong: rgba(255,255,255,0.10);
+      --line: rgba(255,255,255,0.08);
+
+      --text: #f8f4ee;
+      --muted: rgba(248,244,238,0.75);
+      --soft: rgba(248,244,238,0.50);
+
+      --gold: #d6b98a;
+      --gold-light: #e6cfaa;
+      --gold-soft: rgba(214,185,138,0.65);
+      --gold-glow: rgba(214,185,138,0.22);
+
       --blue: #d6b98a;
       --blue2: #e6cfaa;
       --teal: #c9a86a;
-      --shadow: 0 18px 48px rgba(0,0,0,0.24);
+
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
       --radius: 26px;
       --max: 1220px;
     }
@@ -144,16 +114,15 @@
       color: var(--text);
       font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
       background:
-        linear-gradient(rgba(6, 6, 8, 0.78), rgba(6, 6, 8, 0.90)),
+        radial-gradient(circle at 50% 18%, rgba(214,185,138,0.08), transparent 38%),
+        linear-gradient(rgba(6, 6, 8, 0.80), rgba(6, 6, 8, 0.92)),
         url("bg.jpg") no-repeat center center;
       background-size: cover;
       background-attachment: fixed;
       line-height: 1.68;
     }
 
-    .globe-bg {
-      display: none;
-    }
+    .globe-bg { display: none; }
 
     .wrap {
       position: relative;
@@ -167,7 +136,7 @@
       top: 0;
       z-index: 30;
       backdrop-filter: blur(16px);
-      background: rgba(10, 10, 12, 0.58);
+      background: rgba(10, 10, 12, 0.62);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
@@ -182,24 +151,28 @@
     }
 
     .brand {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 800;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.05em;
       color: #f8f4ee;
     }
 
-    .brand span { color: #d6b98a; }
+    .brand span { color: var(--gold); }
 
     nav a {
-      color: rgba(245,241,234,0.78);
+      color: rgba(248,244,238,0.78);
       text-decoration: none;
       font-size: 14px;
       margin-left: 18px;
+      transition: opacity 0.2s ease, color 0.2s ease;
     }
 
-    nav a:hover { color: #ffffff; }
+    nav a:hover {
+      color: #ffffff;
+      opacity: 1;
+    }
 
-    section { padding: 58px 0; }
+    section { padding: 64px 0; }
 
     .eyebrow {
       display: inline-flex;
@@ -207,9 +180,9 @@
       gap: 10px;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.10);
-      color: var(--soft);
+      background: rgba(214,185,138,0.10);
+      border: 1px solid rgba(214,185,138,0.18);
+      color: var(--gold-light);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.16em;
@@ -218,22 +191,25 @@
     }
 
     .hero {
-      padding: 86px 0 62px;
+      padding: 92px 0 70px;
       position: relative;
     }
 
     h1 {
       margin: 18px 0 18px;
-      font-size: 52px;
-      line-height: 1.02;
-      letter-spacing: -0.05em;
-      max-width: 860px;
-      color: #fffaf3;
+      font-size: 58px;
+      line-height: 1.01;
+      letter-spacing: -0.06em;
+      max-width: 900px;
+      background: linear-gradient(180deg, #fffaf3 0%, #d6b98a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 6px 20px rgba(214,185,138,0.18);
     }
 
     .hero-lead {
-      max-width: 880px;
-      font-size: 20px;
+      max-width: 920px;
+      font-size: 21px;
       color: var(--muted);
       line-height: 1.9;
       position: relative;
@@ -248,40 +224,46 @@
       bottom: 8px;
       width: 3px;
       border-radius: 999px;
-      background: linear-gradient(180deg, #d6b98a, rgba(214,185,138,0.14));
+      background: linear-gradient(180deg, var(--gold), rgba(214,185,138,0.10));
+      box-shadow: 0 0 8px rgba(214,185,138,0.30);
     }
 
     .hero-card {
-      margin-top: 38px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.06));
+      margin-top: 40px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.05));
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 30px;
       box-shadow: var(--shadow);
-      padding: 28px;
+      padding: 30px;
       backdrop-filter: blur(18px);
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 22px;
+      gap: 24px;
       align-items: stretch;
     }
 
     .origin-text h3 {
-      margin: 0 0 12px;
-      font-size: 30px;
-      letter-spacing: -0.03em;
+      margin: 0 0 14px;
+      font-size: 32px;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
       color: #fffaf3;
     }
 
-    .origin-text p { margin: 0; color: var(--muted); }
+    .origin-text p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.9;
+    }
 
     .proof {
       background: rgba(255,255,255,0.07);
       border: 1px solid rgba(255,255,255,0.10);
       border-radius: 22px;
-      padding: 20px;
+      padding: 22px;
       min-height: 124px;
       backdrop-filter: blur(10px);
     }
@@ -296,7 +278,7 @@
 
     .proof strong {
       display: block;
-      font-size: 34px;
+      font-size: 36px;
       line-height: 1;
       letter-spacing: -0.05em;
       margin-bottom: 8px;
@@ -333,30 +315,28 @@
       grid-template-columns: 1fr;
       gap: 16px;
       align-items: start;
-      margin-bottom: 32px;
+      margin-bottom: 34px;
     }
 
     .section-head h2 {
       margin: 12px 0 0;
-      font-size: 42px;
+      font-size: 44px;
       line-height: 1.03;
       letter-spacing: -0.05em;
-      color: #fffaf3;
+      background: linear-gradient(180deg, #fffaf3 0%, #e6cfaa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 4px 16px rgba(214,185,138,0.12);
     }
 
     .section-head p {
       margin: 0;
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.7;
-      padding: 0;
-      background: none;
-      border: none;
-      box-shadow: none;
+      line-height: 1.75;
       position: relative;
-      overflow: visible;
       padding-left: 18px;
-      max-width: 900px;
+      max-width: 920px;
     }
 
     .section-head p::before {
@@ -367,7 +347,7 @@
       bottom: 0;
       width: 3px;
       border-radius: 999px;
-      background: linear-gradient(180deg, #d6b98a, rgba(214,185,138,0.12));
+      background: linear-gradient(180deg, var(--gold), rgba(214,185,138,0.12));
     }
 
     .card,
@@ -383,12 +363,7 @@
 
     .grid-2 { display: grid; grid-template-columns: 1.02fr 0.98fr; gap: 22px; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-
-    .grid-col-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
+    .grid-col-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 
     .card { padding: 24px; }
 
@@ -404,12 +379,12 @@
       line-height: 1.85;
     }
 
-    .capability-block { padding: 22px; }
+    .capability-block { padding: 24px; }
 
     .capability-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+      gap: 16px;
     }
 
     .capability strong {
@@ -457,7 +432,7 @@
       border-radius: 18px;
       background: rgba(214,185,138,0.10);
       border: 1px solid rgba(214,185,138,0.18);
-      color: #e6cfaa;
+      color: var(--gold-light);
       font-weight: 800;
     }
 
@@ -470,7 +445,7 @@
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: #d6b98a;
+      background: var(--gold);
       box-shadow: 0 0 0 8px rgba(214,185,138,0.10);
     }
 
@@ -486,9 +461,7 @@
       max-width: 92%;
     }
 
-    .team-stack {
-      padding: 24px;
-    }
+    .team-stack { padding: 24px; }
 
     .team-top {
       padding: 18px 20px;
@@ -552,13 +525,15 @@
     }
 
     .quote {
-      font-size: 42px;
+      font-size: 44px;
       line-height: 1.04;
       letter-spacing: -0.05em;
       max-width: 920px;
       margin: 0 auto;
       text-align: center;
-      color: #fffaf3;
+      background: linear-gradient(180deg, #fffaf3 0%, #d6b98a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .subquote {
@@ -567,6 +542,7 @@
       text-align: center;
       color: var(--muted);
       font-size: 19px;
+      line-height: 1.8;
     }
 
     footer {
@@ -576,9 +552,8 @@
       text-align: center;
     }
 
-    a { color: #e6cfaa; }
+    a { color: var(--gold-light); }
 
-    /* immersion section */
     #immersion-plan {
       padding: 90px 0 48px;
     }
@@ -590,16 +565,16 @@
       align-items: start;
     }
 
-    .immersion-left {
-      padding-top: 8px;
-    }
+    .immersion-left { padding-top: 8px; }
 
     .immersion-left h2 {
       margin: 14px 0 18px;
       font-size: 48px;
       line-height: 1.04;
       letter-spacing: -0.05em;
-      color: #fffaf3;
+      background: linear-gradient(180deg, #fffaf3 0%, #e6cfaa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       max-width: 720px;
     }
 
@@ -621,7 +596,7 @@
       bottom: 4px;
       width: 3px;
       border-radius: 999px;
-      background: linear-gradient(180deg, #d6b98a, rgba(214,185,138,0.12));
+      background: linear-gradient(180deg, var(--gold), rgba(214,185,138,0.12));
     }
 
     .immersion-quote {
@@ -697,6 +672,7 @@
       .section-head,
       .grid-2,
       .grid-3,
+      .grid-col-2,
       .team-row,
       .immersion-layout {
         grid-template-columns: 1fr;
@@ -707,10 +683,11 @@
       .timeline-item { grid-template-columns: 1fr; }
       .phase::after { display: none; }
 
-      h1 { font-size: 40px; }
-      .section-head h2 { font-size: 32px; }
+      h1 { font-size: 42px; }
+      .section-head h2 { font-size: 34px; }
       .immersion-left h2 { font-size: 36px; }
       .immersion-quote { font-size: 24px; margin-top: 28px; }
+      .quote { font-size: 34px; }
     }
   </style>
 </head>
