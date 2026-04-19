@@ -5,20 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Looply | 从美国出发，走向全球</title>
 
-  <script>
-    (function () {
-      const PASSWORD = "looply2026";
-      const input = prompt("Enter access code");
+ <script>
+  (function () {
+    const PASSWORD = "looply2026";
+    const input = prompt("Enter access code");
 
-      if (!input || input !== PASSWORD) {
-        document.open();
-        document.write(`
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Access Denied</title>
+    if (!input || input !== PASSWORD) {
+      document.open();
+      document.write(`
+        <h1 style="color:white;text-align:center;margin-top:20%;background:#0b0b0d;height:100vh;">
+          Access Denied
+        </h1>
+      `);
+      document.close();
+
+      throw new Error("Blocked");
+    }
+  })();
             <style>
               html, body {
                 margin: 0;
